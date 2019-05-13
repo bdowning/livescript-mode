@@ -140,7 +140,7 @@
 ;; Customizable Variables
 ;;
 
-(defconst livescript-mode-version "0.4.1"
+(defconst livescript-mode-version "0.4.2"
   "The version of `livescript-mode'.")
 
 (defgroup livescript nil
@@ -152,7 +152,7 @@
   :type 'integer
   :group 'livescript)
 
-(defcustom livescript-command "livescript"
+(defcustom livescript-command "lsc"
   "The LiveScript command used for evaluating code."
   :type 'string
   :group 'livescript)
@@ -167,7 +167,7 @@
   :type 'string
   :group 'livescript)
 
-(defcustom livescript-args-repl '("-i")
+(defcustom livescript-args-repl '("")
   "The arguments to pass to `livescript-command' to start a REPL."
   :type 'list
   :group 'livescript)
@@ -385,7 +385,7 @@ called `livescript-compiled-buffer-name'."
       '("if" "else" "new" "return" "try" "catch"
         "finally" "throw" "break" "continue" "for" "in" "while"
         "delete" "instanceof" "typeof" "switch" "super" "extends"
-        "class" "until" "loop"))
+        "class" "until" "loop" "require"))
 
 ;; Reserved keywords either by JS or CS.
 (defvar livescript-js-reserved
@@ -396,7 +396,8 @@ called `livescript-compiled-buffer-name'."
 ;; LiveScript keywords.
 (defvar livescript-cs-keywords
       '("then" "unless" "and" "or" "is" "own"
-        "isnt" "not" "of" "by" "when"))
+        "isnt" "not" "of" "by" "when" "typeof!"
+	"require!" "export"))
 
 ;; Iced LiveScript keywords
 (defvar iced-livescript-cs-keywords
