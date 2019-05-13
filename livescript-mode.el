@@ -396,7 +396,8 @@ called `livescript-compiled-buffer-name'."
 ;; LiveScript keywords.
 (defvar livescript-cs-keywords
       '("then" "unless" "and" "or" "is" "own"
-        "isnt" "not" "of" "by" "when" "typeof!" "require"))
+        "isnt" "not" "of" "by" "when" "typeof!"
+	"require!" "export"))
 
 ;; Iced LiveScript keywords
 (defvar iced-livescript-cs-keywords
